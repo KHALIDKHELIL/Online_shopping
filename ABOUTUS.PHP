@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>ብራንድ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    .about-section {
+      background-color: #ffffff;
+      color: white;
+
+
+    }
+
+    .about-section h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+
+    .about-section p {
+      margin: 10px;
+      margin-bottom: 0px;
+      text-align: left;
+      padding: 10px;
+      line-height: 1.5;
+    }
+
+
+    #stalk {
+      text-align: center;
+
+    }
+
+    h2 {
+      text-align: center;
+      color: #223142;
+    }
+
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .column {
+      background-color: #1a78e344;
+      width: 33.33%;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px;
+      max-height: 350px;
+    }
+
+
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #283747;
+      color: rgb(255, 255, 255);
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+
+
+    .title {
+      color: black;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: rgb(255, 255, 255);
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+
+    }
+
+    .button:hover {
+      background-color: rgb(58, 44, 44);
+      transform: scale(1.12);
+    }
+
+    footer {
+      font-size: small;
+      margin-top: 30px;
+    }
+
+
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="../My Market.php" style="position:absolute; left:2%; display:block;"><img style="z-index: 100; border-radius: 50%;" src="../image/logo.jpg" alt="logo" width="60px"></a>
+
+
+
+
+  <div class="about-section">
+  <h1 id="Welcome">ብራንድ <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
+
+    <p>Welcome to our vibrant online marketplace based in Ethiopia, where the world of possibilities awaits you! At our virtual emporium, we curate an eclectic assortment of unique and extraordinary products that cater to your every whim and desire. From fashion-forward apparel and captivating home decor to cutting-edge gadgets and captivating collectibles, our diverse range of offerings ensures there's something special for everyone.</p>
+    <p>We pride ourselves on being more than just a marketplace; we are a community of passionate individuals who share a love for discovery, creativity, and exceptional experiences. Our dedicated team scours the globe, handpicking the finest treasures to present to you, ensuring that each item encapsulates the essence of craftsmanship and innovation.</p>
+    <p>Beyond the products themselves, our mission is to provide an immersive and seamless shopping experience. We've designed our website to be intuitive and user-friendly, allowing you to effortlessly navigate through our extensive catalog. With secure transactions and reliable shipping services, your satisfaction and peace of mind are our top priorities.</p>
+    <p>As an Ethiopian-based company, we embrace our rich cultural heritage and celebrate the vibrant diversity of our nation. We also recognize the importance of supporting local artisans and entrepreneurs, and we take great pride in showcasing their remarkable talents on our platform.</p>
+    <p>Join us on this exhilarating journey of exploration, where you'll uncover hidden gems, stumble upon delightful surprises, and embark on a shopping experience unlike any other. Whether you're seeking a one-of-a-kind gift, a statement piece to elevate your style, or a simple indulgence for yourself, our online marketplace is your ultimate destination.</p>
+    <p>Indulge your senses, ignite your imagination, and let us accompany you on an extraordinary retail adventure. Welcome to our world, where inspiration knows no bounds, and dreams become reality.</p>
+  </div>
+
+
+
+
+
+
+  <div id=" stalk">
+    <h1>The Dream Group</h1>
+    <p>Enjoy The Stalking &#128513</p>
+  </div>
+
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="holder">
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img style="width:100px; height:100px;" src="image/khalid.jpg" alt="khalid khelil" style="width:33%">
+          <div class="container">
+            <h2>Khalid</h2>
+            <p class="title">Teacher &amp; Co-&nbsp;Founder</p>
+            <p>Our Analyst</p>
+            <a href="mailto:khalidkhelil19@gmail.com"><button class="button">Contact</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img style="width:100px; height:100px;" src="image/yealem.jpg" alt="yealem mezmur" style="width:33%">
+          <div class="container">
+            <h2>Yealem</h2>
+            <p class="title">Co-&nbsp;Founder &amp; Designer</p>
+            <p>Our designer</p>
+
+            <a href="mailto:yealemmezmur19@gmail.com"><button class="button">Contact</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img style="width:100px; height:100px;" src="image/yordanos.jpg" alt="Yordanos teferi" style="width:33%">
+          <div class="container">
+            <h2>Yordanos</h2>
+            <p class="title">Analyst &amp; Co-&nbsp;Founder</p>
+            <p>Our designer</p>
+
+
+            <a href="mailto:yordanosteferi19@gmail.com"><button class="button">Contact</button></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+
+<footer>
+  <h2>&copy Copyright 2024. the group .<br> All Rights Reserved</h2>
+</footer>
+
+<!--
+  add the button function later
+-->
+<script>
+
+
+</script>
+
+</html>

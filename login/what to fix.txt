@@ -1,0 +1,15 @@
+-fix the blank page after login SOMEWHAT DONE
+-makes it to take to index after changing password
+-fix the welcome.php css
+-fix the email name and subjects
+-add icons on all pages
+-make all colors consistent (blueish)
+-add a timer to delete if user didn't verify email within a week
+-add login to verify.php and style buttons
+
+-fix the id++ iteration in the db after each registration   DONE
+-fix the verified column after deletion of the user   DONE
+-fix change-password.php   DONE
+-fix forgot-password.php   DONE
+
+#if user want to edit his profile ??

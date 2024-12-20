@@ -1,0 +1,139 @@
+<?php
+// Include your database connection code here
+@include 'db_connc.php';
+include 'Security.php';
+
+// Get the product ID from the URL
+$product_id = $_GET['Id'];
+$userid = $_SESSION['userid'];
+if (isset($_POST['add_to_cart'])) {
+
+    $product_id = $_POST['product_Id'];
+    $product_color = $_POST['Color'];
+    $product_Size = $_POST['Size'];
+    $userid = $_SESSION['userid'];
+    $product_quantity = 1;
+
+    $select_cart = mysqli_query($conn, "SELECT * FROM cart WHERE productid = '$product_id' and Customerid='$userid' ");
+
+    if (mysqli_num_rows($select_cart) > 0) {
+        $message[] = 'product already added to cart';
+    } else {
+        $insert_product = mysqli_query($conn, "INSERT INTO cart (productid, Customerid, Quantity, Color, Size) 
+        VALUES('$product_id', '$userid', '$product_quantity', '$product_color','$product_Size')");
+        $message[] = 'product added to cart succesfully';
+    }
+}
+
+
+
+// Fetch the product details by ID
+$sql = "SELECT * FROM products WHERE Id = $product_id";
+$result = mysqli_query($conn, $sql);
+
+if ($result && $product = mysqli_fetch_assoc($result)) {
+    // Get the product's rating
+    // $rating_sql = "SELECT AVG(rating) AS avg_rating FROM ratings WHERE product_id = $product_id";
+    // $rating_result = mysqli_query($conn, $rating_sql);
+    // $rating = mysqli_fetch_assoc($rating_result);
+
+    // Get product reviews
+    // $reviews_sql = "SELECT * FROM reviews WHERE product_id = $product_id";
+    // $reviews_result = mysqli_query($conn, $reviews_sql);
+
+?>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title><?php echo $product['Productname']; ?></title>
+        <link rel="stylesheet" href="cart.css">
+        <style>
+            body {
+                background-color: white;
+                color: #1da1f2;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                color: black;
+            }
+
+            h2 {
+                color: black;
+            }
+
+            p {
+                color: black;
+            }
+
+            img {
+                width: 10%;
+                height: 10%;
+                border: 2px solid #1da1f2;
+            }
+
+            .discription {
+                position: absolute;
+                left: 40%;
+                top: 5%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="detail">
+            <div class='box' style="position:relative; margin-top: 0px; margin-bottom:10px; ">
+                <div class='img-box'>
+                    <img src="php admin crud/uploaded_img/<?php echo $product['productImage']; ?>" alt="<?php echo $product['Productname']; ?>">
+                </div>
+                <p>Price: $<?php echo $product['Price']; ?></p>
+
+
+            </div>
+            <div class="discription">
+                <h2>Detail</h2>
+                <?php echo $product['ProductDetail']; ?>
+                <form action="" class="productform" method="post">
+                    <select id="selectOption" onchange="updateInput(this)">
+                        <option value="XL">XL </option>
+                        <option value="x">x</option>
+                        <option value="xx">xx</option>
+                        <option value="xy">xy</option>
+                    </select>
+                    <input type="text" name="Size" placeholder="Enter the Size" id="inputField" readonly>
+                    <input type="text" name="Color" placeholder="Enter the Color">
+
+                    <input type="hidden" name="product_Id" value="<?php echo $product['Id']; ?>">
+
+                    <input type="submit" style="width: 10%;padding-left: 2px;" class="button" value="cart" name="add_to_cart">
+                </form>
+            </div>
+
+            <!-- <form action="" method="post">
+                <input type="text" name="Color" id=>
+                <input type="text" name="Size" id=>
+                <input type="submit" class="button" value="Add_To_Product" name="Product_detail">
+
+
+            </form> -->
+        </div>
+    <?php
+}
+
+    ?>
+
+    <h2>Product Rating</h2>
+
+
+    <h2>Product Reviews</h2>
+
+    <script>
+        function updateInput(selectElement) {
+            const inputField = document.getElementById('inputField');
+            inputField.value = selectElement.value;
+        }
+    </script>
+    </body>
+
+    </html>
